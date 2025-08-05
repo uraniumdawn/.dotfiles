@@ -1,0 +1,223 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "workbench.sideBar.location": "right",
+  "security.workspace.trust.enabled": false,
+  "workbench.startupEditor": "none",
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "workbench.settings.editor": "json",
+  "window.commandCenter": false,
+  // "editor.lineNumbers": "relative",
+  "editor.fontFamily": "Liga Meslo LG M DZ",
+  "editor.fontSize": 13.5,
+  "editor.lineHeight": 1.4,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.accessibilitySupport": "off",
+  "extensions.ignoreRecommendations": true,
+  "workbench.colorTheme": "Darcula",
+  "workbench.tips.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorCustomizations": {
+    "gitDecoration.untrackedResourceForeground": "#D5756C",
+    "gitDecoration.modifiedResourceForeground": "#6897BB",
+    "gitDecoration.ignoredResourceForeground": "#808080",
+  },
+  "editor.hover.enabled": true,
+  // "editor.scrollbar.horizontal": "hidden",
+  // "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 5,
+  "editor.scrollbar.horizontalScrollbarSize": 5,
+  "editor.cursorStyle": "line-thin",
+  "breadcrumbs.enabled": true,
+  "workbench.layoutControl.enabled": false,
+  "window.titleBarStyle": "native",
+  "apc.electron": {
+    "titleBarStyle": "hidden"
+  },
+  "apc.menubar.compact": true,
+  "apc.activityBar": {
+    "position": "bottom",
+    "size": 30,
+    "itemMargin": 1
+  },
+  "apc.header": {
+    "height": 28
+  },
+  "apc.sidebar.titlebar": {
+    "height": 28
+  },
+  "apc.statusBar": {
+    "position": "editor-bottom"
+  },
+  "apc.stylesheet": {},
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.sneak": true,
+  "vim.foldfix": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-y>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "k",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "lineBreakInsert"
+      ],
+      "silent": true
+    },
+    {
+      "before": [
+        "<leader>",
+        "=",
+      ],
+      "commands": [
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "f"
+      ],
+      "commands": [
+        "editor.action.revealDeclaration"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "O"
+      ],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "F"
+      ],
+      "commands": [
+        "editor.action.peekDeclaration"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "D"
+      ],
+      "commands": [
+        "editor.action.peekDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "H"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "editor.action.revealDefinitionAside"
+      ]
+    },
+    {
+      "before": [
+        "z",
+        "="
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "f",
+      ],
+      "commands": [
+        "editor.action.refactor"
+      ]
+    }
+  ],
+  "vscode-bigquery.projects": [],
+  "vscode-bigquery.pinned-projects": [],
+  "Prettier-SQL.tabSizeOverride": 4,
+  // Go settings
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--path-mode=abs",
+    "--fast-only"
+  ],
+  "go.formatTool": "custom",
+  "go.alternateTools": {
+    "customFormatter": "golangci-lint"
+  },
+  "go.formatFlags": [
+    "fmt",
+    "--stdin"
+  ],
+  "[go]": {
+    "editor.formatOnSave": false
+  },
+  "go.toolsManagement.autoUpdate": true
+}

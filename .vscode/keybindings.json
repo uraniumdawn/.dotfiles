@@ -1,0 +1,278 @@
+[
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+cmd+v",
+        "command": "toggleVim"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "l",
+        "command": "list.select",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "o",
+        "command": "list.toggleExpand",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+;",
+        "command": "insertPrevSuggestion",
+        "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "-deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "-toggleSearchEditorContextLines",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "-toggleFindInSelection",
+        "when": "editorFocus"
+    },
+    // Intellij IDEA keybindings
+    {
+        "key": "cmd+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly && !editorHasSelection",
+        "intellij": "Duplicate Line"
+    },
+    {
+        "keky": "cmd+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack",
+        "intellij": "Navigate back"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward",
+        "intellij": "Navigate forward"
+    },
+    {
+        "key": "cmd+alt+m",
+        "command": "editor.action.codeAction",
+        "when": "editorTextFocus",
+        "intellij": "Extract Method",
+        "args": {
+            "kind": "refactor.extract.function",
+            "apply": "ifSingle"
+        }
+    },
+    {
+        "key": "cmd+alt+v",
+        "command": "editor.action.codeAction",
+        "when": "editorTextFocus",
+        "intellij": "Extract Variable",
+        "args": {
+            "kind": "refactor.extract.variable",
+            "apply": "ifSingle"
+        }
+    },
+    {
+        "key": "cmd+alt+c",
+        "command": "editor.action.codeAction",
+        "when": "editorTextFocus",
+        "intellij": "Extract Constant",
+        "args": {
+            "kind": "refactor.extract.constant",
+            "apply": "ifSingle"
+        }
+    },
+    {
+        "key": "cmd+alt+p",
+        "command": "editor.action.codeAction",
+        "when": "editorTextFocus",
+        "args": {
+            "kind": "refactor.introduce.parameter",
+            "apply": "ifSingle"
+        },
+        "intellij": "Introduce Parameter"
+    },
+    {
+        "key": "cmd+/",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "editor.action.commentLine",
+                "cursorDown"
+            ]
+        },
+        "when": "editorTextFocus && !editorReadonly",
+        "intellij": "Comment/uncomment with line comment"
+    },
+    {
+        "key": "shift+ctrl+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly",
+        "intellij": "Move Line Down"
+    },
+    {
+        "key": "shift+ctrl+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly",
+        "intellij": "Move Line Up"
+    },
+    // {
+    //     "key": "shift+f6",
+    //     "command": "renameFile",
+    //     "when": "explorerViewletVisible && filesExplorerFocus",
+    //     "intellij": "Rename (File)"
+    // },
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+        "when": "!explorerViewletFocus",
+        "intellij": "Open corresponding tool window (Explorer)"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletFocus",
+        "intellij": "Close corresponding tool window (Explorer)"
+    },
+    {
+        "key": "cmd+6",
+        "command": "workbench.view.scm",
+        "when": "activeViewlet != 'workbench.view.scm'",
+        "intellij": "Open corresponding tool window (Git)"
+    },
+    {
+        "key": "cmd+6",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "activeViewlet == 'workbench.view.scm'",
+        "intellij": "Close corresponding tool window (Git)"
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.action.goToDeclaration",
+        "when": "editorTextFocus",
+        "intellij": "Go to declaration"
+    },
+    {
+        "key": "cmd+alt+b",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor",
+        "intellij": "Go to implementation(s)"
+    },
+    {
+        "key": "cmd+u",
+        "command": "java.action.navigateToSuperImplementation",
+        "when": "editorLangId == java && javaLSReady && editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor",
+        "intellij": "Go to super implementation(s)"
+    },
+    {
+        "key": "alt+space",
+        "command": "editor.action.previewDeclaration",
+        "intellij": "Open quick definition lookup"
+    },
+    {
+        "key": "cmd+y",
+        "command": "editor.action.previewDeclaration",
+        "intellij": "Open quick definition lookup"
+    },
+    {
+        "key": "cmd+u",
+        "command": "java.action.navigateToSuperImplementation",
+        "when": "editorTextFocus && java:serverMode == Standard",
+        "intellij": "Go to super-method/super-class"
+    },
+    {
+        "key": "cmd+alt+l",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor",
+        "intellij": "Reformat code"
+    },
+    {
+        "key": "cmd+alt+l",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly",
+        "intellij": "Reformat code"
+    },
+    {
+        "key": "cmd+alt+l",
+        "command": "editor.action.formatSelection",
+        "when": "editorHasDocumentSelectionFormattingProvider && editorHasSelection && editorTextFocus && !editorReadonly",
+        "intellij": "Reformat selected code"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "editor.action.joinLines",
+        "when": "editorTextFocus && !editorReadonly",
+        "intellij": "Smart line join"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "mac": "cmd+alt+n",
+        "command": "",
+        "when": "editorTextFocus",
+        "intellij": "Inline",
+        "todo": "N/A"
+    },
+]
