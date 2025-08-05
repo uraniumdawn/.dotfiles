@@ -1,0 +1,135 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            "shift shift": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "j k": "vim::NormalBefore"
+        }
+    },
+    {
+        "context": "Dock || Terminal || Editor || ProjectPanel",
+        "bindings": {
+            "ctrl-h": "workspace::ActivatePaneLeft",
+            "ctrl-l": "workspace::ActivatePaneRight",
+            "ctrl-k": "workspace::ActivatePaneUp",
+            "ctrl-j": "workspace::ActivatePaneDown"
+        }
+    },
+    {
+        "context": "Editor && VimControl && !VimWaiting && !menu",
+        "bindings": {
+            "space b": "git::Blame",
+            "shift-k": "editor::Hover",
+            "space l f": "editor::Format",
+            "space d": "diagnostics::Deploy",
+            // "space f f": "file_finder::Toggle",
+            "space o": "tab_switcher::Toggle",
+            "space e": "workspace::ToggleLeftDock",
+            "space /": "workspace::NewSearch",
+            "n": "search::SelectNextMatch",
+            "shift-n": "search::SelectPreviousMatch",
+            "space t": "workspace::NewCenterTerminal",
+            "g b": "editor::ToggleComments",
+            "+ +": "workspace::Save",
+            "space c": "pane::CloseActiveItem"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+        "bindings": {
+            "space f": [
+                "task::Spawn",
+                { "task_name": "tv files", "reveal_target": "center" }
+            ]
+        }
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "l g": [
+                "task::Spawn",
+                { "task_name": "lazygit", "reveal_target": "center" }
+            ]
+        }
+    },
+    {
+        "context": "vim_mode == insert",
+        "bindings": {
+            "ctrl-h": "editor::MoveLeft",
+            "ctrl-l": "editor::MoveRight",
+            "ctrl-k": "editor::MoveUp",
+            "ctrl-j": "editor::MoveDown"
+        }
+    },
+    {
+        "context": "vim_mode == insert && menu",
+        "bindings": {
+            "ctrl-k": "editor::ContextMenuPrevious",
+            "ctrl-j": "editor::ContextMenuNext"
+        }
+    },
+    {
+        "bindings": {
+            "ctrl-k": "menu::SelectPrevious",
+            "ctrl-j": "menu::SelectNext"
+        }
+    },
+    {
+        "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+        "bindings": {
+            "shift-j": "editor::MoveLineDown",
+            "shift-k": "editor::MoveLineUp"
+        }
+    },
+    // {
+    //     "context": "FileFinder",
+    //     "bindings": {
+    //         "ctrl-k": "menu::SelectPrevious",
+    //         "ctrl-j": "menu::SelectNext"
+    //     }
+    // },
+    // {
+    //     "context": "Workspace",
+    //     "bindings": {
+    //         "ctrl-k": "menu::SelectPrevious",
+    //         "ctrl-j": "menu::SelectNext"
+    //     }
+    // },
+    // {
+    //     "context": "CommandPalette",
+    //     "bindings": {
+    //         "ctrl-k": "menu::SelectPrevious",
+    //         "ctrl-j": "menu::SelectNext"
+    //     }
+    // },
+    {
+        "context": "Workspace",
+        "bindings": {
+            "cmd-k": [
+                "projects::OpenRecent",
+                {
+                    "create_new_window": false
+                }
+            ],
+            "ctrl-x": "tab_switcher::CloseSelectedItem"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "cmd-t": "workspace::NewTerminal"
+        }
+    }
+]
