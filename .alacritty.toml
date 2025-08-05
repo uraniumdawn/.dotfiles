@@ -1,0 +1,55 @@
+live_config_reload = true
+
+[window]
+decorations = "none"
+startup_mode = "Maximized"
+
+[window.padding]
+x = 7
+y = 7
+
+[colors.primary]
+background = '#272727'
+foreground = '#c7c7c7'
+[colors.selection]
+background = "#807c79"
+foreground = "#ebdbb2"
+[colors.normal]
+black = "#272727"
+blue = "#448488"
+cyan = "#689d69"
+green = "#989719"
+magenta = "#b16185"
+red = "#cc231c"
+white = "#a89983"
+yellow = "#d79920"
+[colors.bright]
+black = "#928373"
+blue = "#83a597"
+cyan = "#8ec07b"
+green = "#b8ba25"
+magenta = "#d3859a"
+red = "#fb4833"
+white = "#ebdbb2"
+yellow = "#fabc2e"
+[colors.cursor]
+cursor = "#a8a7a5"
+text = "CellBackground"
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "Thin"
+
+[keyboard]
+bindings = [
+    { key = "Left", mods = "Alt", chars = "\u001BB" },                           # Skip word left
+    { key = "Right", mods = "Alt", chars = "\u001BF" },                          # Skip word right
+    { key = "Left", mods = "Command", chars = "\u001bOH", mode = "AppCursor" },  # Home
+    { key = "Right", mods = "Command", chars = "\u001bOF", mode = "AppCursor" }, # End
+    { key = "Back", mods = "Command", chars = "\u0015" },                        # Delete line
+    { key = "Back", mods = "Alt", chars = "\u001b\u007f" },                      # Delete word
+    { key = "c", mods = "Command", action = "Copy" },                            # Copy to Clipboard
+]

@@ -1,0 +1,18 @@
+colour: &colour "#1f1f1f"
+
+k9s:
+  body:
+    bgColor: *colour
+  frame:
+    title:
+      bgColor: *colour
+  views:
+    table:
+      bgColor: *colour
+      header:
+        bgColor: *colour
+    logs:
+        fgColor: white
+        bgColor: *colour
+        indicator:
+          bgColor: *colour
