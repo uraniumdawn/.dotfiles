@@ -7,6 +7,17 @@
         "key": "ctrl+cmd+v",
         "command": "toggleVim"
     },
+    // To iterate over items in Open Quick Window 
+    {
+        "key": "ctrl+j",
+        "command": "list.focusDown",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "list.focusUp",
+        "when": "inQuickOpen"
+    },
     {
         "key": "r",
         "command": "renameFile",

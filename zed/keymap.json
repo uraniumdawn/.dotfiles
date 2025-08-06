@@ -15,35 +15,73 @@
     {
         "context": "Editor && vim_mode == insert",
         "bindings": {
+            "k j": "vim::NormalBefore",
             "j k": "vim::NormalBefore"
-        }
-    },
-    {
-        "context": "Dock || Terminal || Editor || ProjectPanel",
-        "bindings": {
-            "ctrl-h": "workspace::ActivatePaneLeft",
-            "ctrl-l": "workspace::ActivatePaneRight",
-            "ctrl-k": "workspace::ActivatePaneUp",
-            "ctrl-j": "workspace::ActivatePaneDown"
         }
     },
     {
         "context": "Editor && VimControl && !VimWaiting && !menu",
         "bindings": {
             "space b": "git::Blame",
-            "shift-k": "editor::Hover",
             "space l f": "editor::Format",
-            "space d": "diagnostics::Deploy",
-            // "space f f": "file_finder::Toggle",
             "space o": "tab_switcher::Toggle",
-            "space e": "workspace::ToggleLeftDock",
             "space /": "workspace::NewSearch",
             "n": "search::SelectNextMatch",
             "shift-n": "search::SelectPreviousMatch",
-            "space t": "workspace::NewCenterTerminal",
-            "g b": "editor::ToggleComments",
-            "+ +": "workspace::Save",
-            "space c": "pane::CloseActiveItem"
+            // This is the copy from default keymaps
+            "g shift-r": "vim::PushReplaceWithRegister",
+            "g r n": "editor::Rename",
+            "g r r": "editor::FindAllReferences",
+            "g r i": "editor::GoToImplementation",
+            "g r a": "editor::ToggleCodeActions",
+            "g g": "vim::StartOfDocument",
+            "g h": "editor::Hover",
+            "g B": "editor::BlameHover",
+            "g t": "pane::ActivateNextItem",
+            "g shift-t": "pane::ActivatePreviousItem",
+            "g d": "editor::GoToDefinition",
+            "g shift-d": "editor::GoToDeclaration",
+            "g y": "editor::GoToTypeDefinition",
+            "g shift-i": "editor::GoToImplementation",
+            "g x": "editor::OpenUrl",
+            "g f": "editor::OpenSelectedFilename",
+            "g n": "vim::SelectNextMatch",
+            "g shift-n": "vim::SelectPreviousMatch",
+            "g l": "vim::SelectNext",
+            "g shift-l": "vim::SelectPrevious",
+            "g >": ["editor::SelectNext", { "replace_newest": true }],
+            "g <": ["editor::SelectPrevious", { "replace_newest": true }],
+            "g a": "editor::SelectAllMatches",
+            "g s": "outline::Toggle",
+            "g shift-o": "outline::Toggle",
+            "g shift-s": "project_symbols::Toggle",
+            "g c a": "editor::ToggleCodeActions", // zed specific
+            "g shift-a": "editor::FindAllReferences", // zed specific
+            "g space": "editor::OpenExcerpts", // zed specific
+            "g *": ["vim::MoveToNext", { "partial_word": true }],
+            "g #": ["vim::MoveToPrevious", { "partial_word": true }],
+            "g j": ["vim::Down", { "display_lines": true }],
+            "g down": ["vim::Down", { "display_lines": true }],
+            "g k": ["vim::Up", { "display_lines": true }],
+            "g up": ["vim::Up", { "display_lines": true }],
+            "g $": ["vim::EndOfLine", { "display_lines": true }],
+            "g end": ["vim::EndOfLine", { "display_lines": true }],
+            "g 0": ["vim::StartOfLine", { "display_lines": true }],
+            "g home": ["vim::StartOfLine", { "display_lines": true }],
+            "g shift-m": ["vim::MiddleOfLine", { "display_lines": true }],
+            "g ^": ["vim::FirstNonWhitespace", { "display_lines": true }],
+            "g v": "vim::RestoreVisualSelection",
+            "g ]": "editor::GoToDiagnostic",
+            "g [": "editor::GoToPreviousDiagnostic",
+            "g i": "vim::InsertAtPrevious",
+            "g ,": "vim::ChangeListNewer",
+            "g ;": "vim::ChangeListOlder",
+            "shift-h": "vim::WindowTop",
+            "shift-m": "vim::WindowMiddle",
+            "shift-l": "vim::WindowBottom",
+            "q": "vim::ToggleRecord",
+            "shift-q": "vim::ReplayLastRecording",
+            "@": "vim::PushReplayRegister"
         }
     },
     {
@@ -56,12 +94,13 @@
         }
     },
     {
-        "context": "Workspace",
+        "context": "Workspace && vim_mode == normal",
         "bindings": {
             "l g": [
                 "task::Spawn",
                 { "task_name": "lazygit", "reveal_target": "center" }
-            ]
+            ],
+            "space e": "workspace::ToggleRightDock"
         }
     },
     {
@@ -93,27 +132,6 @@
             "shift-k": "editor::MoveLineUp"
         }
     },
-    // {
-    //     "context": "FileFinder",
-    //     "bindings": {
-    //         "ctrl-k": "menu::SelectPrevious",
-    //         "ctrl-j": "menu::SelectNext"
-    //     }
-    // },
-    // {
-    //     "context": "Workspace",
-    //     "bindings": {
-    //         "ctrl-k": "menu::SelectPrevious",
-    //         "ctrl-j": "menu::SelectNext"
-    //     }
-    // },
-    // {
-    //     "context": "CommandPalette",
-    //     "bindings": {
-    //         "ctrl-k": "menu::SelectPrevious",
-    //         "ctrl-j": "menu::SelectNext"
-    //     }
-    // },
     {
         "context": "Workspace",
         "bindings": {
@@ -124,12 +142,6 @@
                 }
             ],
             "ctrl-x": "tab_switcher::CloseSelectedItem"
-        }
-    },
-    {
-        "context": "Terminal",
-        "bindings": {
-            "cmd-t": "workspace::NewTerminal"
         }
     }
 ]

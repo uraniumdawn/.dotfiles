@@ -8,7 +8,8 @@
   "editor.fontLigatures": true,
   "workbench.settings.editor": "json",
   "window.commandCenter": false,
-  // "editor.lineNumbers": "relative",
+  "workbench.editor.showTabs": "none",
+  "editor.lineNumbers": "relative",
   "editor.fontFamily": "Liga Meslo LG M DZ",
   "editor.fontSize": 13.5,
   "editor.lineHeight": 1.4,
@@ -82,26 +83,40 @@
         "<Esc>"
       ]
     },
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "K"
+        "<C-j>"
       ],
-      "commands": [
-        "lineBreakInsert"
-      ],
-      "silent": true
-    },
-    {
-      "before": [
-        "<leader>",
-        "=",
-      ],
-      "commands": [
-        "editor.action.formatDocument"
+      "after": [
+        "<down>"
       ]
     },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "after": [
+        "<up>"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "after": [
+        "<left>"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "<right>"
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
         "g",
@@ -109,6 +124,15 @@
       ],
       "commands": [
         "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "<space>",
+        "o"
+      ],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditor"
       ]
     },
     {
@@ -177,18 +201,31 @@
     },
     {
       "before": [
-        "z",
-        "="
+        "q",
+        "f"
       ],
       "commands": [
         "editor.action.quickFix"
       ]
     },
+    {
+      "before": [
+        "<space>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "periscope.search",
+          "when": "editorTextFocus"
+        }
+      ]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<leader>",
+        "<space>",
         "f",
       ],
       "commands": [

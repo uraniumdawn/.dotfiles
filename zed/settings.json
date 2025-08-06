@@ -7,7 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-    "theme": "JetBrains New Dark",
+    "theme": "One Dark",
     "vim_mode": true,
     "base_keymap": "JetBrains",
     "buffer_font_size": 13.5,
