@@ -1,5 +1,6 @@
 {
   "files.autoSave": "afterDelay",
+  // "workbench.activityBar.location": "bottom",
   "editor.formatOnSave": true,
   "workbench.sideBar.location": "right",
   "security.workspace.trust.enabled": false,
@@ -28,8 +29,6 @@
     "gitDecoration.ignoredResourceForeground": "#808080",
   },
   "editor.hover.enabled": true,
-  // "editor.scrollbar.horizontal": "hidden",
-  // "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.verticalScrollbarSize": 5,
   "editor.scrollbar.horizontalScrollbarSize": 5,
   "editor.cursorStyle": "line-thin",
@@ -115,15 +114,25 @@
         "<right>"
       ]
     },
+    // Signature in insert mode — Ctrl-S (Simulated as normal-mode binding)
+    {
+      "before": [
+        "<C-s>"
+      ],
+      "commands": [
+        "editor.action.triggerParameterHints"
+      ]
+    },
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "g",
-        "h"
+        "d"
       ],
-      "commands": [
-        "editor.action.showHover"
+      "after": [
+        "\"",
+        "_",
+        "d"
       ]
     },
     {
@@ -135,15 +144,8 @@
         "workbench.action.quickOpenPreviousRecentlyUsedEditor"
       ]
     },
-    {
-      "before": [
-        "g",
-        "f"
-      ],
-      "commands": [
-        "editor.action.revealDeclaration"
-      ]
-    },
+    // LSP --------------------------------
+    // Go to
     {
       "before": [
         "g",
@@ -156,6 +158,120 @@
     {
       "before": [
         "g",
+        "D"
+      ],
+      "commands": [
+        "editor.action.revealDeclaration"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "t"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "i"
+      ],
+      "commands": [
+        "editor.action.goToImplementation"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "o"
+      ],
+      "commands": [
+        "editor.action.goToTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r",
+        "r"
+      ],
+      "commands": [
+        "editor.action.peekReferences"
+      ]
+    },
+    // Hover
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    // Diagnostics navigation — [d / ]d
+    {
+      "before": [
+        "[",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.prev"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "d"
+      ],
+      "commands": [
+        "editor.action.marker.next"
+      ]
+    },
+    // Go to in split (aside)
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        "editor.action.revealDefinitionAside"
+      ]
+    },
+    // Symbol search
+    {
+      "before": [
+        "g",
         "O"
       ],
       "commands": [
@@ -165,16 +281,18 @@
     {
       "before": [
         "g",
-        "F"
+        "W"
       ],
       "commands": [
-        "editor.action.peekDeclaration"
+        "workbench.action.showAllSymbols"
       ]
     },
+    // Peek
     {
       "before": [
         "g",
-        "D"
+        "p",
+        "d"
       ],
       "commands": [
         "editor.action.peekDefinition"
@@ -183,7 +301,48 @@
     {
       "before": [
         "g",
-        "H"
+        "p",
+        "D"
+      ],
+      "commands": [
+        "editor.action.peekDeclaration"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "p",
+        "t"
+      ],
+      "commands": [
+        "editor.action.peekTypeDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "p",
+        "i"
+      ],
+      "commands": [
+        "editor.action.peekImplementation"
+      ]
+    },
+    // References
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "p",
+        "r"
       ],
       "commands": [
         "editor.action.referenceSearch.trigger"
@@ -192,25 +351,15 @@
     {
       "before": [
         "g",
-        "f",
-        "f"
+        "."
       ],
       "commands": [
-        "editor.action.revealDefinitionAside"
+        "editor.action.refactor"
       ]
     },
     {
       "before": [
-        "q",
-        "f"
-      ],
-      "commands": [
-        "editor.action.quickFix"
-      ]
-    },
-    {
-      "before": [
-        "<space>",
+        "space",
         "f",
         "f"
       ],
@@ -220,23 +369,49 @@
           "when": "editorTextFocus"
         }
       ]
+    },
+    {
+      "before": [
+        "H"
+      ],
+      "after": [
+        "0"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "after": [
+        "$"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": [
-        "<space>",
-        "f",
+        "g",
+        "."
       ],
       "commands": [
         "editor.action.refactor"
+      ]
+    },
+    {
+      "before": [
+        "d"
+      ],
+      "after": [
+        "\"",
+        "_",
+        "d"
       ]
     }
   ],
   "vscode-bigquery.projects": [],
   "vscode-bigquery.pinned-projects": [],
   "Prettier-SQL.tabSizeOverride": 4,
-  // Go settings
+  // Go settings -------------------------------------------------------------------------------
   "gopls": {
     "ui.semanticTokens": true
   },
@@ -256,5 +431,15 @@
   "[go]": {
     "editor.formatOnSave": false
   },
-  "go.toolsManagement.autoUpdate": true
-}
+  "go.toolsManagement.autoUpdate": true,
+  // Java settings -------------------------------------------------------------------------------
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "~/.sdkman/candidates/java/21.0.3-amzn",
+      "default": true
+    },
+  ],
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "crash",
+}{}

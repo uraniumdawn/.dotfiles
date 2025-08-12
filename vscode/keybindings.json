@@ -18,6 +18,17 @@
         "command": "list.focusUp",
         "when": "inQuickOpen"
     },
+    // To iterate over items in Periscope Search Window
+    {
+        "key": "ctrl+j",
+        "command": "periscope.search",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "periscope.search",
+        "when": "editorTextFocus"
+    },
     {
         "key": "r",
         "command": "renameFile",
@@ -285,5 +296,17 @@
         "when": "editorTextFocus",
         "intellij": "Inline",
         "todo": "N/A"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack",
+        "intellij": "Navigate back"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward",
+        "intellij": "Navigate forward"
     },
 ]
